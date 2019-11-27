@@ -78,16 +78,7 @@ def gross_per_studio(collection)
   total_hash = {}
   studio_total = 0
   while index < collection.length do
-    current_studio_name = collection[index][:studio]
-    previous_studio_name = collection[index - 1][:studio]
-    if current_studio_name == previous_studio_name
-      studio_total += collection[index][:worldwide_gross] + collection[index - 1][:worldwide_gross]
-      total_hash[index][collection[index][:studio]] = studio_total
-    elsif index > 0 && current_studio_name != previous_studio_name
-      studio_total= collection[index][:worldwide_gross] 
-      total_hash[index][collection[index][:studio]] = studio_total
-    end
-    index += 1
+    
   end 
   total_hash
 end

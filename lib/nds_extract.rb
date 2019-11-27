@@ -79,7 +79,7 @@ def gross_per_studio(collection)
   studio_total = 0
   while index < collection.length do
     if !(total_hash.has_key?('collection[index][:studio]'))
-      total_hash
+      total_hash[collection[index][:studio]]
     end
   end 
   total_hash
